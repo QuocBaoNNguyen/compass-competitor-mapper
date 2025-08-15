@@ -106,7 +106,7 @@ export default function Home() {
     <main className="space-y-6">
       <section className="text-center pt-10 pb-6">
         <p className="mt-3 text-slate-600 text-lg max-w-2xl mx-auto">
-          Compass is a lightweight tool for product managers to instantly compare competitors,
+          ProductLens is a lightweight tool for product managers to instantly compare competitors,
           analyze features with AI, and export a clean competitive matrix — in seconds.
         </p>
       </section>
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label className="text-sm text-slate-600">Your product</label>
-            <input className="w-full border rounded-lg p-2" placeholder="Ex: Compass" value={product} onChange={e => setProduct(e.target.value)} />
+            <input className="w-full border rounded-lg p-2" placeholder="Ex: ProductLens" value={product} onChange={e => setProduct(e.target.value)} />
           </div>
           <div>
             <label className="text-sm text-slate-600">Competitors (names)</label>
