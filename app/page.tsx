@@ -6,7 +6,7 @@ import { Badge } from '@/components/Badge'
 import { MatrixTable } from '@/components/MatrixTable'
 import { downloadCSV } from '@/components/DownloadCSV'
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import { Upload, Download, Rocket, Globe } from 'lucide-react'
+import { Upload, Download, Rocket } from 'lucide-react'
 
 type FeatureMap = Record<string, boolean>
 type Result = {
@@ -147,6 +147,26 @@ export default function Home() {
           <button onClick={run} disabled={loading} className="rounded-lg px-3 py-2 border bg-black text-white flex items-center gap-2">
             <Rocket size={16}/> {loading ? 'Analyzing...' : 'Analyze Competitors'}
           </button>
+
+                  <button
+          type="button"
+          onClick={() => {
+            setProduct('CollabSphere')
+            setCompetitors('Slack, Trello, Airtable, Clickup, Hubspot,')
+            setUrls([
+              "https://slack.com/features",
+              "https://trello.com/platforms",
+              "https://www.airtable.com/product",
+              "https://clickup.com/features",
+              "https://www.hubspot.com/products"
+            ].join('\n')) // newline-separated for your textarea
+          }}
+          className="rounded-md bg-slate-100 px-3 py-2 text-sm text-slate-700 hover:bg-slate-200 transition"
+        >
+          Try Demo
+        </button>
+
+
           <button onClick={exportCSV} disabled={!results.length} className="rounded-lg px-3 py-2 border flex items-center gap-2">
             <Download size={16}/> Export CSV
           </button>
